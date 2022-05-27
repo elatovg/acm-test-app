@@ -1,0 +1,13 @@
+namespace: test
+
+resources:
+- ../base
+
+patches:
+- target:
+   kind: Role
+   name: pod-reader
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: test-app-pod-reader
